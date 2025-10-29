@@ -24,13 +24,13 @@ This project provides a Docker/Podman-based environment for running OpenFortiVPN
 
 ### 1. Create VPN Configuration
 
-Create a `config` directory in the project root and add your VPN configuration file:
+A sample configuration file is provided in `config/vpn_config.sample`. Copy and customize it:
 
 ```bash
-mkdir -p config
+cp config/vpn_config.sample config/vpn_config
 ```
 
-Create `config/vpn_config` with your Fortinet VPN settings:
+Then edit `config/vpn_config` with your Fortinet VPN settings:
 
 ```
 host = vpn.example.com

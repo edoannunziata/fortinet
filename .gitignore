@@ -1,1 +1,2 @@
 config/*
+!config/vpn_config.sample

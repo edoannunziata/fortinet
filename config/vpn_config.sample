@@ -1,0 +1,76 @@
+# OpenFortiVPN Configuration File Sample
+# Copy this file to 'vpn_config' and update with your VPN credentials
+#
+# Usage: cp vpn_config.sample vpn_config
+#        nano vpn_config  (edit with your credentials)
+
+# VPN Server Details
+# ------------------
+# The hostname or IP address of your Fortinet VPN server
+host = vpn.example.com
+
+# The port your VPN server is listening on (usually 443 or 10443)
+port = 443
+
+# Authentication
+# --------------
+# Your VPN username
+username = your_username
+
+# Your VPN password
+# Note: For better security, omit this line to be prompted interactively
+password = your_password
+
+# Security
+# --------
+# Certificate fingerprint for the VPN server
+# This helps prevent man-in-the-middle attacks
+# To get the certificate hash, run the container once without this line
+# and the hash will be displayed in the connection error message
+# Format: trusted-cert = 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+# trusted-cert =
+
+# Advanced Options
+# ----------------
+# Set to 0 to allow untrusted certificates (NOT RECOMMENDED for production)
+# set-routes = 1
+
+# Set to 0 to prevent VPN from becoming the default route
+# set-dns = 1
+
+# Specify routes to add when connected (can be specified multiple times)
+# route = 10.0.0.0/8
+# route = 192.168.1.0/24
+
+# Half-internet routes mode (for split tunneling)
+# half-internet-routes = 0
+
+# Use a specific network interface
+# ifname = ppp0
+
+# PPP system plugin location
+# pppd-plugin = /usr/lib/pppd/2.4.7/openfortivpn.so
+
+# PPP log file
+# pppd-log = /var/log/pppd.log
+
+# Additional IPPD options
+# pppd-ifname = ppp0
+# pppd-call =
+
+# Realm for authentication (if required by your VPN)
+# realm =
+
+# Use system proxy settings
+# use-syslog = 0
+
+# Persistent connection (automatically reconnect)
+# persistent = 0
+
+# Notes:
+# ------
+# 1. Lines starting with # are comments
+# 2. Remove the # to uncomment and activate an option
+# 3. Always protect this file - it contains sensitive credentials
+# 4. Do not commit vpn_config (without .sample) to version control
+# 5. See https://github.com/adrienverge/openfortivpn for full documentation
