@@ -1,0 +1,27 @@
+# OpenFortiVPN Configuration File
+# This is a placeholder configuration file - replace with your actual VPN settings
+# DO NOT commit real credentials to this file!
+
+# VPN Gateway
+host = vpn.example.com
+port = 443
+
+# VPN User Authentication
+username = your-username-here
+password = your-password-here
+
+# Optional: Set to 1 to accept untrusted certificates (not recommended for production)
+# set-dns = 0
+# pppd-use-peerdns = 1
+# pppd-log = /var/log/pppd.log
+
+# Optional: Trusted certificate fingerprint
+# trusted-cert = 1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+
+# Optional: Routing settings
+# set-routes = 1
+# half-internet-routes = 0
+
+# Optional: Additional configuration
+# realm =
+# use-syslog = 0

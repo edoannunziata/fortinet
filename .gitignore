@@ -1,1 +1,8 @@
-config/*
+# Config directory - ignore local config files with real credentials
+config/*.local
+config/*_local
+config/.env
+
+# Allow placeholder/example config files to be committed
+!config/vpn_config
+!config/README.md
